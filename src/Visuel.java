@@ -8,7 +8,7 @@ import javafx.application.*;
 import javafx.event.EventHandler;
 import javafx.scene.*;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.*;
 import javafx.stage.*;
@@ -18,9 +18,9 @@ public class Visuel extends Application {
 	
 	public void start(Stage stage) {
 		StackPane root = new StackPane();
-        Scene scene = new Scene(root);
+        Scene newscene = new Scene(root);
         
-        HBox layout= new HBox();
+        VBox layout= new VBox();
         Text debut = new Text("Vous êtes Olivier Chandessu, (age, situation pro, poste) au sein de la compagnie aérienne AirEnac.\n"
         		+ "Cette compagnie se situe dans le milieu de l’aviation d’affaire et compte beaucoup d’entreprises telles que X, Y et Z comme clients.\r\n" + 
         		"Alors que les attaques informatiques se multiplient, vous décidez d’investir dans divers moyens afin de protéger votre entreprise.\nVous avez pour cela un budget de XXX euros.\r\n" + 
@@ -32,9 +32,10 @@ public class Visuel extends Application {
         root.getChildren().add(layout);
      
         stage.setTitle("Jeu de Gestion de crise ssi");
-        stage.setScene(scene);
+        stage.setScene(newscene);
         stage.setResizable(false);
         stage.show();
+        
 	}
 
 	
