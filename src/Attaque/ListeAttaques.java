@@ -95,8 +95,36 @@ public class ListeAttaques {
 		ScenariiTree c11 = new ScenariiTree(null,8,c11L,c11R);
 		Attaque b11 = new Attaque(0.005,c11);
 
-		
-		Attaque a[] = {b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11};
+
+		Scenario d12RRR = new Scenario("Un groupe de hackeurs indépendants a pris pour cible votre entreprise, décidant de vérifier si vos défenses sont assez robustes pour leur résister. \n Malgré plusieurs tentatives de phising, les hackeurs n'arrivent pas à obtenir beaucoup d'informations sur votre entreprise. Les hackeurs se heurtent à votre firewall et parviennent à le détourner avec difficultés. \n  Le Responsable de la Sécurité des Systèmes d'Informations remarque cette attaque et la déjoue.",6,6,6,6,6,6);
+		Scenario d12RRL = new Scenario("Un groupe de hackeurs indépendants a pris pour cible votre entreprise, décidant de vérifier si vos défenses sont assez robustes pour leur résister. \n Malgré plusieurs tentatives de phising, les hackeurs n'arrivent pas à obtenir beaucoup d'informations sur votre entreprise. Les hackeurs se heurtent à votre firewall et parviennent à le détourner avec difficultés. \n  Les hackeurs ne sont pas remarqués et arrivent à voler quelques données critiques.",6,6,6,6,6,6);
+		Scenario d12RLL = new Scenario("Un groupe de hackeurs indépendants a pris pour cible votre entreprise, décidant de vérifier si vos défenses sont assez robustes pour leur résister. \n Malgré plusieurs tentatives de phising, les hackeurs n'arrivent pas à obtenir beaucoup d'informations sur votre entreprise. Les hackeurs pénètrent dans votre réseau sans difficulté. \n Ils volent toutes vos données et injectent un ver dans une machine critique.Le ver fait des dommages considérables \n et  efface toutes vos données critiques. Il arrive à infecter un avion Cessna Citation X+ qui se crashe, causant 17 morts.",6,6,6,6,6,6);
+		Scenario d12RLR = new Scenario("Un groupe de hackeurs indépendants a pris pour cible votre entreprise, décidant de vérifier si vos défenses sont assez robustes pour leur résister. \n Malgré plusieurs tentatives de phising, les hackeurs n'arrivent pas à obtenir beaucoup d'informations sur votre entreprise. Les hackeurs pénètrent dans votre réseau sans difficulté. \n Ils volent toutes vos données et injectent un ver dans une machine critique. Le ver est repéré par votre antivirus \n et effacé avant qu'il ne fasse de dégâts.",6,6,6,6,6,6);
+		Scenario d12LL = new Scenario("Un groupe de hackeurs indépendants a pris pour cible votre entreprise, décidant de vérifier si vos défenses sont assez robustes pour leur résister. \n A l'aide de techniques d'ingénierie sociale, les hackeurs trouvent plusieurs vulnérabilités dans vos systèmes. Ils désarment toutes vos défenses, volent vos données et injectent un ver dans une machine critique. \n  Le ver fait des dommages considérables et efface toutes vos données critiques. \n Il arrive à infecter un avion Cessna Citation X+ qui se crashe, causant 17 morts.",6,6,6,6,6,6);
+		Scenario d12LR = new Scenario("Un groupe de hackeurs indépendants a pris pour cible votre entreprise, décidant de vérifier si vos défenses sont assez robustes pour leur résister.\n  A l'aide de techniques d'ingénierie sociale, les hackeurs trouvent plusieurs vulnérabilités dans vos systèmes. Ils désarment toutes vos défenses, volent vos données et injectent un ver dans une machine critique. \n Le ver est repéré par votre antivirus et effacé avant qu'il ne fasse de dégâts.",6,6,6,6,6,6);
+		ScenariiTree c12RRR = new ScenariiTree(d12RRR,5,null,null);
+		ScenariiTree c12RRL = new ScenariiTree(d12RRL,5,null,null);
+		ScenariiTree c12RLR = new ScenariiTree(d12RLR,6,null,null);
+		ScenariiTree c12RLL = new ScenariiTree(d12RLL,6,null,null);
+		ScenariiTree c12LR = new ScenariiTree(d12LR,6,null,null);
+		ScenariiTree c12LL = new ScenariiTree(d12LL,6,null,null);
+		ScenariiTree c12RL = new ScenariiTree(null,6,c12RLL,c12RLR);
+		ScenariiTree c12RR = new ScenariiTree(null,5,c12RRL,c12RRR);
+		ScenariiTree c12L = new ScenariiTree(null,6,c12LL,c12LR);
+		ScenariiTree c12R = new ScenariiTree(null,4,c12RL,c12RR);
+		ScenariiTree c12 = new ScenariiTree(null,2,c12L,c12R);
+		Attaque b12 = new Attaque(0.005,c12);
+
+
+
+		Scenario d13L = new Scenario("Un de vos concurrent s'est fait passer pour un membre de ANSSI et en a profité pour consulter à loisir vos données et vos failles PSSI.\n Vos employés se laissent berner et croyant bien faire, laissent à votre concurrent un accès total au site. \n Votre concurrent ne se prive pas de révéler vos failles à la presse. \n Vos clients sont très mécontents et se détournent de votre compagnie au profit de votre concurrent.",6,6,6,6,6,6);
+		Scenario d13R = new Scenario("Un de vos concurrent s'est fait passer pour un membre de ANSSI et en a profité pour consulter à loisir vos données et vos failles PSSI.\n La direction choisie de faire patienter l'individu et d'appeler l'ANSSI afin de vérifier l'identité et les droits de l'espion. \n Grâce à cela, vous intentez une action en justice pour espionnage et vol à votre concurrent. \n Vous récupérez une partie de la clientèle de votre concurrent.",6,6,6,6,6,6);
+		ScenariiTree c13R = new ScenariiTree(d13R,2,null,null);
+		ScenariiTree c13L = new ScenariiTree(d13L,2,null,null);
+		ScenariiTree c13 = new ScenariiTree(null,2,c13L,c13R);
+		Attaque b13 = new Attaque(0.005,c13);
+
+		Attaque a[] = {b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13};
 		return a;
 	}
 }
